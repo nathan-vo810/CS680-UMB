@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 public class PrimeGeneratorTest {
     @Test
-    public void GeneratePrimeBetween2And7() {
+    public void GeneratePrimeFrom2To7() {
         PrimeGenerator pg = new PrimeGenerator(2,7);
         pg.generatePrimes();
 
