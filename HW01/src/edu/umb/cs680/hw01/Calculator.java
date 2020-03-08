@@ -12,4 +12,10 @@ public class Calculator {
         }
         return x/y;
     }
+
+    public static void main(String[] args){
+        Calculator	calc = new Calculator();
+        System.out.println( calc.multiply(2, 3) );
+        System.out.println( calc.divide(10, 2) );
+    }
 }
