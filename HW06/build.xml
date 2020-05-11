@@ -26,6 +26,7 @@
         <mkdir dir="${test.reports}"/>
     </target>
 
+<<<<<<< Updated upstream
     <target name="compile" depends="init">
         <javac srcdir="${src}" destdir="${bin}" includeAntRuntime="no">
             <classpath refid="classpath"/>
@@ -53,6 +54,24 @@
     </target>
 
     <target name="run" depends="test">
+=======
+    <target name="clean" depends="init">
+        <delete includeemptydirs="true">
+            <fileset dir="${bin}" includes="**/*"/>
+            <fileset dir="${test.bin}" includes="**/*" />
+        </delete>
+    </target>
+
+    <target name="compile" depends="clean">
+        <javac srcdir="${src}" destdir="${bin}" includeAntRuntime="no">
+            <classpath refid="classpath"/>
+            <include name="edu/umb/cs680/hw06/DVDPlayer.java"/>
+        </javac>
+    </target>
+
+
+    <target name="run" depends="compile">
+>>>>>>> Stashed changes
         <java classname="edu.umb.cs680.hw06.DVDPlayer"
               classpathref="classpath"
               fork="true"/>

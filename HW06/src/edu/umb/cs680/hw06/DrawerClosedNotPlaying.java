@@ -1,6 +1,10 @@
 package edu.umb.cs680.hw06;
 
 public class DrawerClosedNotPlaying implements State {
+<<<<<<< Updated upstream
+=======
+    private static DVDPlayer player = DVDPlayer.getInstance();
+>>>>>>> Stashed changes
     private DrawerClosedNotPlaying() {}
 
     private static DrawerClosedNotPlaying instance = null;

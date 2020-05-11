@@ -1,6 +1,10 @@
 package edu.umb.cs680.hw06;
 
 public class DrawerOpen implements State {
+<<<<<<< Updated upstream
+=======
+    private static DVDPlayer player = DVDPlayer.getInstance();
+>>>>>>> Stashed changes
     private DrawerOpen() {}
 
     private static DrawerOpen instance = null;
