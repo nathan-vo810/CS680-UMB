@@ -26,35 +26,6 @@
         <mkdir dir="${test.reports}"/>
     </target>
 
-<<<<<<< Updated upstream
-    <target name="compile" depends="init">
-        <javac srcdir="${src}" destdir="${bin}" includeAntRuntime="no">
-            <classpath refid="classpath"/>
-            <include name="edu/umb/cs680/hw06/DVDPlayer.java"/>
-        </javac>
-    </target>
-
-    <target name="compile-test" depends="compile">
-        <javac srcdir="${test.src}" destdir="${test.bin}" includeAntRuntime="no">
-            <classpath refid="classpath"/>
-            <include name="edu/umb/cs680/hw06/*Test.java"/>
-        </javac>
-    </target>
-
-    <target name="test" depends="compile-test">
-        <junitlauncher printSummary="true">
-            <classpath refid="classpath" />
-            <testclasses outputdir="${test.reports}">
-                <fileset dir="${test.bin}">
-                    <include name="edu/umb/cs680/hw06/*Test.class"/>
-                </fileset>
-                <listener type="legacy-plain" sendSysOut="true"/>
-            </testclasses>
-        </junitlauncher>
-    </target>
-
-    <target name="run" depends="test">
-=======
     <target name="clean" depends="init">
         <delete includeemptydirs="true">
             <fileset dir="${bin}" includes="**/*"/>
@@ -71,7 +42,6 @@
 
 
     <target name="run" depends="compile">
->>>>>>> Stashed changes
         <java classname="edu.umb.cs680.hw06.DVDPlayer"
               classpathref="classpath"
               fork="true"/>
